@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
-  spec.name                    = "portfolyou-jekyll-theme"
+  spec.name                    = "nredko.github.io"
   spec.version                 = "2.2.1"
   spec.authors                 = ["Youssef Raafat"]
   spec.email                   = ["YoussefRaafatNasry@gmail.com"]
 
-  spec.summary                 = "A beautiful portfolio Jekyll theme."
-  spec.homepage                = "https://github.com/YoussefRaafatNasry/portfolYOU"
+  spec.summary                 = "web site name."
+  spec.homepage                = "https://www.nredko.com"
   spec.license                 = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
