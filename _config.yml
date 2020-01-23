@@ -1,8 +1,7 @@
 # Site settings
-title: portfolYOU
+title: Nikolay Redko
 description: >- # this means to ignore newlines until "baseurl:"
-  Always code as if the guy who ends up maintaining your code
-  will be a violent psychopath who knows where you live.
+  Software development services since 1995
 baseurl: ""  # the subpath of your site, e.g. /blog
 url: "http://www.nredko.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: nredko/nredko.github.io
@@ -17,22 +16,22 @@ markdown: kramdown
 # Author Info
 author:
   name          : John Doe
-  image         : https://bit.ly/2Fqe5kQ
-  behance       : your_username
+  image         : assets/img/nredko.jpg
+#  behance       : nredko
 # dribbble      : your_username
-  email         : username@domain.com
-  facebook      : your_username
-  github        : your_username
+  email         : nredko@nredko.com
+  facebook      : nredko
+  github        : nredko
 # gitlab        : your_username
 # instagram     : your_username
-  linkedin      : your_username
-  medium        : your_username
+  linkedin      : nredko
+#  medium        : your_username
 # soundcloud    : your_username
 # spotify       : your_username
 # stackoverflow : your_user_id
 # tumblr        : your_username.tumblr.com
 # twitch        : your_username
-  twitter       : your_username
+#  twitter       : your_username
 # vimeo         : your_username
 # youtube       : your_channel_name
 
