@@ -1,24 +1,31 @@
 ---
-layout: default
+layout: page
 ---
 
-<!-- Blog Post Breadcrumbs -->
-{%- include blog_post_breadcrumb.html -%}
+<h1><b>{{ page.title }}</b></h1>
 
-<div class="row">
+<p class="post-metadata text-muted">
+  {{ page.date | date_to_long_string }} -  
+  <b>
+  {%- assign words = content | number_of_words -%}
+  {%- if words < 360 -%}
+    less than 1 min read time
+  {%- else -%}
+    {{ words | divided_by: 180 }} mins read time
+  {%- endif -%}
+  </b>
 
-        <div class="col-lg-8">
-    
-           {%- include blog_post_article.html -%}
+  <br>
 
-           {%- include blog_post_comments.html -%}
-        </div>
- 
-           {%- include blog_sidebar.html -%}
+  {%- if page.tags != empty -%}
+    Tags: 
+    {% for tag in page.tags %}
+    <a class="text-decoration-none no-underline" href="{{ tag | slugify | prepend:'/blog/tags#' | relative_url }}">
+      <span class="tag badge badge-pill text-primary border border-primary">{{ tag }}</span>
+    </a>
+    {% endfor %}
+  {%- endif -%}
 
+</p>
 
-        
-</div> <!-- End of row-->
-    
-
-    
+{{ content }}
