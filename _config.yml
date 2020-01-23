@@ -1,15 +1,15 @@
 
 # Site Settings
 
-title: Sujay Kundu  # Your Title 
-subtitle: Full Stack Web Developer 
-email: sujaykundu777@gmail.com  # Your Email
+title: Nikolay Redko  # Your Title 
+subtitle: Software development services
+email: nredko@nredko.com
 description: >-  
-  Sujay Kundu is Web Developer and Blogger
+  Software development since 1999
 baseurl: "/devlopr-starter" # the subpath of your site, e.g. /blog
-url: "https://sujaykundu.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: xplor4r
-github_username:  sujaykundu777
+url: "https://www.nredko.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: 
+github_username:  nredko
 
 # Navigation 
 
@@ -27,27 +27,27 @@ urls:
 
 # Author Details
 
-author_logo: profile.jpg
-author: Sujay Kundu
-author_bio: Hi, My Name is Sujay Kundu. I love to Code and Design. devlopr-jekyll is a theme built for developers.  
-author_email: "sujaykundu777@gmail.com"
-author_location: India
-author_website_url: "https://sujaykundu.com"
+author_logo: nredko.jpg
+author: Nikolay Redko
+author_bio: Hi, My Name is Nikolay Redko. I provide any kinds of software related services since 1999.
+author_email: "nredko@nredko"
+author_location: Russia
+author_website_url: "https://www.nredko.com"
 
 # social links
-twitter_username: xplor4r
-github_username:  sujaykundu777
-facebook_username: sujay.kundu2
-linkedin_username: sujaykundu
-behance_username: sujaykundu
-instagram_username: xplor4r
-medium_username: sujaykundu
-telegram_username: sujaykundu
-dribbble_username: sujaykundu777
-flickr_username: sujaykundu777
+twitter_username: nredko
+github_username:  nredko
+facebook_username: nredko
+linkedin_username: nredko
+behance_username: 
+instagram_username: 
+medium_username: 
+telegram_username: nredko
+dribbble_username: 
+flickr_username: 
 
 # Choose what to show ( true - display or false - don't display)
-show_author_work_experiences: true
+show_author_work_experiences: false
 show_author_education_details: true
 show_author_project_details: true
 
@@ -86,10 +86,10 @@ author_project_details:
                 visibility: true
                 
 #for comments using disqus
-disqus_shortname: sujay-kundu  
+disqus_shortname: 
 
 # wakatime username
-wakatime_username: sujaykundu777
+wakatime_username: 
 
 # syntax highlighter
 markdown: kramdown
@@ -103,8 +103,8 @@ paginate_path: "/blog/page/:num/"
 
 # Search ( add algolia credentials below )
 algolia:
-  application_id: D9WA1YKTRS # add your algolia app id
-  index_name: blog_posts # You can replace that with whatever name you want
+  application_id:  # add your algolia app id
+  index_name:  # You can replace that with whatever name you want
   files_to_exclude: [] 
   nodes_to_index: 'article' 
   search_only_api_key: 58ffdd7cd6c45ec1577a7fcd789b1b9b # add algolia search only api key 
