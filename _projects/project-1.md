@@ -1,7 +1,7 @@
 ---
 name: Concave Hull
 tools: [JS, Math]
-image: assets/img/hull.png
+image: /assets/img/hull.png
 description: Implementation of ConcaveHull algorithm basing on math article.
 ---
 
@@ -13,7 +13,7 @@ Unfortunately, there were no ready to use implementations on the market, so I've
 
 Here is the result:
 
-![](assets/img/feat-rasa.jpg)
+![](/assets/img/feat-rasa.jpg)
 
 
 <p class="text-center">
