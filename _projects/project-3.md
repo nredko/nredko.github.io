@@ -7,7 +7,7 @@ description: Slack bot for VMWare management
 
 # OpBot
 
-Slack bot which allows you to manage VMWare infrastructure. Made for company [Opvizor]("https://www.opvizor.com/").
+Slack bot which allows you to manage VMWare infrastructure. Made for [Opvizor](https://www.opvizor.com/).
 
 ![](http://www.opvizor.com/wp-content/uploads/2016/11/vmwintable.png)
 
