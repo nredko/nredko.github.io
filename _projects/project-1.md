@@ -1,20 +1,21 @@
 ---
 name: Concave Hull
 tools: [JS, Math]
-image: https://thenextscoop.com/wp-content/uploads/2019/01/web-design-2019.jpg
-description: This project has an individual showcase page, not just a direct link to the project site or repo.
+image: ./assets/img/hull.png
+description: Implementation of ConcaveHull algorithm basing on math article.
 ---
 
-# Project A
+# Concave Hull
 
-Projects A is an awesome project! Just remove the direct link from the project's front matter and you will have an individual page like this for your project.
+For Realty Analysis Agency we required to build transport accessibility areas. 
+To show them on map we've need Concave Hull algorithm implemented in C#. 
+Unfortunately, there were no ready to use implementations on the market, so I've made [my own](https://github.com/nredko/ConcaveHull).
 
-![](https://techcrunch.com/wp-content/uploads/2018/05/screen-shot-2018-05-01-at-11-30-23-am.png?w=1390&crop=1)
+Here is the result:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+![](./assets/img/feat-rasa.jpg)
 
-![](https://techcrunch.com/wp-content/uploads/2018/05/screenshot-materialio.png)
 
 <p class="text-center">
-{% include button.html link="https://github.com/YoussefRaafatNasry/portfolYOU" text="Learn More" %}
+{% include button.html link="http://gis.magazinmagazinov.ru" text="gis.magazinmagazinov.ru" %}
 </p>
