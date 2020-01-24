@@ -1,11 +1,11 @@
 - name: Project Management
-  percentage: 95
+  percentage: 100
   color: danger
 
 - name: System Architecture
-  percentage: 95
+  percentage: 100
   color:
 
 - name: System Analysis
-  percentage: 95
+  percentage: 100
   color: dark

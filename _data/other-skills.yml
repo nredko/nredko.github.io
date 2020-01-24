@@ -1,15 +1,11 @@
-- name: .NET
-  percentage: 95
-  color: info
-
 - name: Databases
-  percentage: 95
-  color: success
+  percentage: 100
+  color: dark
 
 - name: Web applications
-  percentage: 95
-  color: 
+  percentage: 100
+  color: success
 
 - name: Desktop applications
-  percentage: 95
-  color: 
+  percentage: 100
+  color: danger
