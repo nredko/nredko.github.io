@@ -2,7 +2,7 @@
 title: SSH port forwarding in vscode (Visual Studio Code)
 tags: [ssh, vscode, port forwarding]
 style: fill
-color: primary
+color: success
 description: VS Code has great feature for remote debugging, but configuring port forwarding is not obvious
 ---
 
