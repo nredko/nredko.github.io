@@ -7,7 +7,7 @@ description: Standalone or online SET card game
 
 # SET game
 
-This classic [Set cards game]("https://en.wikipedia.org/wiki/Set_(card_game)") was designed for my kids.
+This classic [Set cards game](https://en.wikipedia.org/wiki/Set_(card_game)) was designed for my kids.
 
 ![](/assets/img/set.png)
 
