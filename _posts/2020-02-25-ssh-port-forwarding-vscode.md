@@ -12,9 +12,9 @@ It's really great feature - you can have your code on remopte server, use git re
 
 First steps to configure vscode for remote development on Windows:
 
-https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse 
+[https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse ](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse )
 
-https://code.visualstudio.com/blogs/2019/07/25/remote-ssh 
+[https://code.visualstudio.com/blogs/2019/07/25/remote-ssh ](https://code.visualstudio.com/blogs/2019/07/25/remote-ssh) 
 
 
 ## Port forwarding
