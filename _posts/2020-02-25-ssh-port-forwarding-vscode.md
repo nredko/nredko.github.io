@@ -23,7 +23,7 @@ If you run Java, Python, NodeJs, Go or whatever on remote Linux server, in many 
 
 See short description how this can be done within the same SSH connection which you use to connect to console or file system (via SCP or SFTP):
 
-https://www.ssh.com/ssh/tunneling/example
+[https://www.ssh.com/ssh/tunneling/example](https://www.ssh.com/ssh/tunneling/example)
 
 ## Ususal errors in vscode
 
