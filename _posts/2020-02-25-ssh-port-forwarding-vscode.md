@@ -39,7 +39,11 @@ Search over internet doesn't give you useful answers.
 ## Solution
 
 After configuring connection string as `ssh -A -L 8080:localhost:8080 user@myserver.address.com` open yous ssh config file (usually `C:\Users\%UserName%\.ssh\config` for local user's configuration) you should change 
-the string `LocalForward 8080:localhost:8080` to `LocalForward localhost:8080 localhost:8080`. 
+the string `LocalForward 8080:localhost:8080` to 
+
+```LocalForward localhost:8080 localhost:8080``` 
+
+![](/assets/img/vscode.png)
 
 *That's it!*
 
