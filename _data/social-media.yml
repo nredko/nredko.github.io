@@ -89,4 +89,9 @@ youtube:
 telegram:
   url   : https://t.me/
   icon  : fab fa-telegram
-  color : 00ff00
+  color : 0000ff
+
+skype:
+  url   : skype:
+  icon  : fab fa-skype
+  color : 0000ff
