@@ -29,13 +29,12 @@ author:
 # soundcloud    : your_username
 # spotify       : your_username
 # stackoverflow : your_user_id
+  telegram      : nredko
 # tumblr        : your_username.tumblr.com
 # twitch        : your_username
-#  twitter       : your_username
+# twitter       : your_username
 # vimeo         : your_username
 # youtube       : your_channel_name
- telegram       : nredko
- skype          : nredko
 # Collections
 collections:
   projects:

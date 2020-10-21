@@ -85,3 +85,8 @@ youtube:
   url   : https://www.youtube.com/
   icon  : fab fa-youtube
   color : ff0000
+
+telegram:
+  url   : https://t.me/
+  icon  : fab fa-telegram
+  color : 00ff00
