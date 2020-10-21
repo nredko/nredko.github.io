@@ -74,7 +74,11 @@ All URL on Application settings page should point to your deployment URL, `https
 
 Also, you should set signature algorithm to RS256 (by default auth0 set HS256, which will not work):
 
-Application -> Advanced Settings -> OAuth -> JsonWebToken Signature Algorithm -> RS256
+`Application` -> `Advanced Settings` -> `OAuth` -> `JsonWebToken Signature Algorithm` ==> `RS256`
+
+
+Another important thing is that Swagger uses it's own oauth callback page which should be configured for auth0 application:
+`Application` -> `Allowed Callback URLs` ==> `https://localhost:5000/swagger/oauth2-redirect.html`
 
 
 ### Code
