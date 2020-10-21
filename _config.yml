@@ -20,7 +20,7 @@ author:
 #  behance       : nredko
 # dribbble      : your_username
   email         : nredko@nredko.com
-  facebook      : nredko
+#  facebook      : nredko
   github        : nredko
 # gitlab        : your_username
 # instagram     : your_username
@@ -34,7 +34,8 @@ author:
 #  twitter       : your_username
 # vimeo         : your_username
 # youtube       : your_channel_name
-
+ telegram       : nredko
+ skype          : nredko
 # Collections
 collections:
   projects:
