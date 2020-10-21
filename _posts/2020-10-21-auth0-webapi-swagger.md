@@ -7,7 +7,6 @@ description: How to implement aspnetcore-3.1 webapi application with embedded sw
 ---
 
 ## Auth0
-#
 
 [Auth0.com](https://auth0.com) is a great service which allows you to not care of authentication, implementing social logins, one-time passwords, SMS verifications etc.
 
@@ -16,14 +15,12 @@ They have great [tutorials](https://auth0.com/docs) how to use their service in 
 This article concerns quite specific case when you have implemented .net core 3.1 webapi application (to use it by separate front-end or native apps) and would like to provide Swagger UI for your REST API.
 
 ## Swagger
-#
 
 If you've found this page then most possible you know what is [Swagger](http://swagger.io), how to use [Swashbuckle Swagger](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1) in .Net Core applications and how useful it is for testing and documenting your API.
 
 The only problem is that configuration of authentication in swagger-ui is not documented for Auth0. There is a lot of [topics](https://community.auth0.com/search?q=swagger) by auth0 community but there is no good example.
 
 ## Solution
-#
 
 If you already are using webapi with some frontend - you already have configured auth0 [application](https://auth0.com/docs/quickstart/spa/vanillajs#configure-auth0) and [api](https://auth0.com/docs/quickstart/backend/aspnet-core-webapi#configure-auth0-apis) according their docs.
 
@@ -49,7 +46,6 @@ Put them to your appsettings.json
 ```
 
 ### aspnetcore project configuration
-#
 
 Auth0 will not work with `http://` scheme so configure your `applicationUrl` as `https://`. 
 
@@ -144,5 +140,5 @@ Configuration of API auth in .net application is exactly as in [this sample](htt
 ```
 
 ## Github
-#
+
 Here is the [sample project](https://github.com/nredko/auth0-aspnetcore-webapi-samples/tree/master/Samples/user-info-swagger)
