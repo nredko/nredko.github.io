@@ -49,6 +49,7 @@ Put them to your appsettings.json
 
 Auth0 will not work with `http://` scheme so configure your `applicationUrl` as `https://`. 
 
+```json
 {
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
@@ -63,6 +64,7 @@ Auth0 will not work with `http://` scheme so configure your `applicationUrl` as 
     }
   }
 }
+```
 
 ### Significant auth0 configuration options
 
