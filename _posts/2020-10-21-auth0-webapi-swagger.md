@@ -139,6 +139,8 @@ Configuration of API auth in .net application is exactly as in [this sample](htt
   });
 ```
 
+![](/assets/img/auth0-swagger.png)
+
 ## Github
 
 Here is the [sample project](https://github.com/nredko/auth0-aspnetcore-webapi-samples/tree/master/Samples/user-info-swagger)
