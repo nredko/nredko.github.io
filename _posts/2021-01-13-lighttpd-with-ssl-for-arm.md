@@ -2,7 +2,7 @@
 title: Cross-compiling lighttpd with SSL for Android ARM
 tags: [cross-compilation, adndroid, lighttpd]
 style: fill
-color: info
+color: light
 description: How to compile lighttpd with SSL support for Android
 ---
 
