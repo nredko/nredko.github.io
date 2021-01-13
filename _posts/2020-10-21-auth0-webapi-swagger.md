@@ -2,7 +2,7 @@
 title: Swagger-UI with authentication via Auth0
 tags: [aspnetcore-3.1, webapi, auth0, swagger]
 style: fill
-color: success
+color: info
 description: How to implement aspnetcore-3.1 webapi application with embedded swagger-ui using auth0.com authentication
 ---
 
