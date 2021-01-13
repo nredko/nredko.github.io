@@ -18,6 +18,8 @@ Existing builds had not included SSL support, and compilation using [native ARM 
 
 Using [Android NDK](https://developer.android.com/ndk) I managed to build lighttpd for Android as well as its requirements: [zlib](https://zlib.net/), [pcre](https://www.pcre.org/) and [openssl](https://www.openssl.org/).
 
+The only module excluded from compilation (so not supported) is [mod_webdav](https://redmine.lighttpd.net/projects/1/wiki/Docs_ModWebDAV), since implementation of this module in `lighttpd` uses features of Linux kernel which are not supported in Android OS.
+
 ## Github
 
 Here is the [source project](https://github.com/nredko/lighttpd-arm)
