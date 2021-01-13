@@ -8,7 +8,7 @@ description: How to compile lighttpd with SSL support for Android
 
 ## Problem
 
-During my collaboration with (Grey-Box)[https://www.grey-box.ca/] project we encountered a problem that we need fast and lightweigth http server with SSL support and PHP support.
+During my collaboration with [Grey-Box](https://www.grey-box.ca/) project we encountered a problem that we need fast and lightweigth http server with SSL support and PHP support.
 
 We decided to use [lighttpd](http://lighttpd.net) since it doesn't require PHP daemon to run permanently.
 
