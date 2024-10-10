@@ -1,0 +1,100 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]];
+then
+    echo "Re-launching with `sudo`"
+    exec sudo /bin/bash "$0" "$@"
+fi
+
+apt update && apt full-upgrade -y && apt autoremove -y
+sed -i -e "s/%sudo\s+ALL=\(ALL\:ALL\) ALL/%sudo   ALL=(ALL) NOPASSWD:ALL/g" /etc/sudoers
+apt install -y mc htop tmux vim-nox curl ca-certificates
+curl -s https://raw.githubusercontent.com/tomasiser/vim-code-dark/refs/heads/master/colors/codedark.vim -o /usr/share/vim/vim91/colors/codedark.vim
+rc="colorscheme codedark
+set nu
+"
+echo "$rc" > /etc/vim/vimrc.local 
+
+echo "set -g mouse on
+set -g status off
+setw -g aggressive-resize on
+" > /root/.tmux.conf
+
+echo "
+if [ -d \"$HOME/bin\" ] ; then
+    export PATH="$HOME/bin:$PATH"
+fi
+" > /etc/profile.d/home-path.sh
+
+# ssh keys
+keys="
+ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAyZ5oQ5TP2YsWmGSFct3BymYDkcj+7B7cez0aC9BeSklFk/iEWVzdAa2BWu/g7jdRBdcrEebT2kzm+NOYCjpfgxvvL/kPexQq5OG/CsoCd/ivIbPS9ja6CIxbGYCCiAAGVGzm1kHmXiLI+PanQd00BUUzduh5AjvusUJU29mJY/WDQmY1yXjiJIkx7Nuglz98mVL4lknfZ+t3ArR9zO54Y82vum/c9L0cIT8z6MSFI4tjOt3S3shbGXS9+Wiytm6eQgXg3A0lcA1RgfhBYJzqHDsc9YfbwSPr7ZUfuYAqO3bByxUe4t3SVmF3iX4Xs/8tYpp4YTTsMewdcGfs9p4xtQ== nredko
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDoE61sjWQDjFJ+R8rCQiRP7rcNt75HdMHjBKVOz7sUGdMpxH9CpzaBArB69CCXARPrXu8eQWBb/L7s/O1XnxbGpGU0cVz6Svto0fzVw/XKggCiciQjozP1D/AypMI/Ksxicc9uIcnoLLliYjctlk2sVgHLsuQzY4QG03OM9Lf+Ghdqlowu1Q3BrwZV/wm3w5/6aZfZAIEnzS4moydVISo4AgPbPA/484RqNMiTHLiUf5KZLqL0FMzTa7TgrZv6lE/6qTNw1YQzvokgXzSBiB/FAlEPKGj3JvheVpOFX6Q1XQVCSL9il5bai3lEb5F3R/iCYT1SBNIBrpZ6b+pcVrBJ sredko
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhpRlHbKtaqN4q91V78m+cJENsU093jkSXKG5tuSXDvNrM+RpAjY3vk9hhn/aPM4MjlnjC0wT3+bEiIofnM2k+CwdFybWXg37Tg4Ya6O/VVPu3DlnBad1ExVrnocNVvcmMFtR5TUK2k2t/0QC4Gw2ANjxCsZ4vx0d6vT+FI0go6+tQA8521O3BBWUU0LsGNs7WxIFQtS4/dZFgjQTQqLkeTZRwOE19U0XURQej5FsbVtlUPmjlJZHUdmKPck1pi3khmx9Vt41EnE6mRKva+uThv3LdYBNhODQ7q/8nLLRo7bUTXEHs4v3HEoAyEMS3i2SWUTY+952clERioEh3db4ezPZEr99o4GTeZ6Di1yE56Pz3vYz81zNylSnhvWK3XppTh02ipYCRVSMTYoDF8C4THJfOokivj56xT2pifbtIMxnxe/8W1jYDnAx2wJpLy0UtouO9a+qg0dGkHVv0TbhX2Eq/aUMwfqr1w4nZ2/xTsOaazDiioLGSMlxUE7Js+Kk= root@pricepoint
+"
+mkdir -p /root/.ssh
+cat /root/.ssh/authorized_keys | grep -q nredko || echo "$keys" >> /root/.ssh/authorized_keys
+chmod 700 /root/.ssh
+chmod 600 /root/.ssh/authorized_keys
+if [ "$SUDO_USER" != "root" ] && [ "$SUDO_USER" != "" ] 
+then
+  mkdir -p /home/$SUDO_USER/.ssh
+  cat /home/$SUDO_USER/.ssh/authorized_keys | grep -q nredko || echo "$keys" >> /home/$SUDO_USER/.ssh/authorized_keys
+  chmod 700 /home/$SUDO_USER/.ssh
+  chmod 600 /home/$SUDO_USER/.ssh/authorized_keys
+  echo "set -g mouse on
+set -g status off
+setw -g aggressive-resize on" > /home/"$SUDO_USER"/.tmux.conf
+fi
+
+# gitlab-runner repo
+curl -sL "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | bash
+
+# postgresql repo
+install -d /usr/share/postgresql-common/pgdg
+curl -s -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+sh -c 'echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+# dotnet repo
+source /etc/os-release
+curl -s  https://packages.microsoft.com/config/$ID/$VERSION_ID/packages-microsoft-prod.deb -o packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+# docker repo
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do apt remove -y $pkg; done
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+chmod a+r /etc/apt/keyrings/docker.asc
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  tee /etc/apt/sources.list.d/docker.list > /dev/null
+groupadd docker
+if [ "$SUDO_USER" != "root" ] && [ "$SUDO_USER" != "" ] 
+then
+  newgrp docker
+  usermod -a -G docker $SUDO_USER || true
+  chown "$SUDO_USER":"$SUDO_USER" /home/"$SUDO_USER"/.docker -R || true
+  chmod g+rwx "/home/$SUDO_USER/.docker" -R || true
+fi
+
+
+# Update packages
+apt update
+
+echo "
+Now you can install:
+
+ gitlab-runner:
+   apt install -y gitlab-runner
+ postgresql server:
+   apt install -y postgresql-16
+ dotnet:
+   apt install -y dotnet-sdk-8.0
+   apt install -y dotnet-runtime-8.0
+   apt install -y aspnetcore-runtime-8.0
+ docker:
+   apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+"
