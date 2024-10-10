@@ -11,7 +11,30 @@ sed -i -e "s/%sudo\s+ALL=\(ALL\:ALL\) ALL/%sudo   ALL=(ALL) NOPASSWD:ALL/g" /etc
 apt install -y mc htop tmux vim-nox curl ca-certificates
 curl -s https://raw.githubusercontent.com/tomasiser/vim-code-dark/refs/heads/master/colors/codedark.vim -o /usr/share/vim/vim91/colors/codedark.vim
 rc="colorscheme codedark
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoread
+set autoindent
+set smartindent
 set nu
+set laststatus=1
+set timeoutlen=500
+set ttimeoutlen=0
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+set encoding=utf-8
+set termencoding=utf-8
+set updatetime=500
+set noswapfile
+set splitright
+set splitbelow
+set nocompatible
+set ignorecase
+set hidden
+set hlsearch
+set incsearch
 "
 echo "$rc" > /etc/vim/vimrc.local 
 
