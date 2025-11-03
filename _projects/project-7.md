@@ -2,10 +2,10 @@
 name: Desktop Сalendar
 tools: [Dotnet]
 image: https://nredko.com/assets/img/calendar.png
-description: A Windows Desktop Calendar that features daily images of student-made jewelry.
+description: Desktop Calendar for Windows that features daily images of hand-made jewelry
 ---
 
-# A Windows Desktop Calendar that features daily images of student-made jewelry.
+# Desktop Calendar for Windows that features daily images of hand-made jewelry
 
 ![](https://nredko.com/assets/img/calendar.png)
 
@@ -13,11 +13,26 @@ description: A Windows Desktop Calendar that features daily images of student-ma
 
 All authors of jewelery are students of [Art School for Children #4, Miass town](https://scholl4.ru/)
 
+
+Authors of this project:
+
+Vladimir Maksimov (Jewelery master and teacher)
+
+Vasiliy Matveev (Art School master, designer)
+
+Peter Pravdin (Inspirer and main author of the project)
+
+(c) 2025 Miass Town, Chelyabinsk Region, Russia
+
 ## Problem
 
-The only problem was to support old Windows versions, starting from Windows 10 without any updates.
+The only tech problem was to support old Windows versions, starting from Windows 10 without any updates. It was solved by choosing quite old Dotnet 4.6
 
 Installer was made with [NSIS](https://nsis.sourceforge.net)
+
+
+Yet another problem was to find the time for it :)
+
 
 ## Result
 
