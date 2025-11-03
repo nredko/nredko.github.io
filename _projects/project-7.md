@@ -5,6 +5,10 @@ image: https://nredko.com/assets/img/calendar.png
 description: Desktop Calendar for Windows showing daily images of hand-made jewelery crafted by students 
 ---
 
+# Desktop Calendar for Windows showing daily images of hand-made jewelery crafted by students 
+
+![](https://nredko.com/assets/img/calendar.png)
+
 # Authors
 
 All authors of jewelery are students of [Art School for Children #4, Miass town](https://scholl4.ru/)
