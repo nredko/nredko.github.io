@@ -2,10 +2,10 @@
 name: Desktop Сalendar
 tools: [Dotnet]
 image: https://nredko.com/assets/img/calendar.png
-description: Desktop Calendar for Windows showing daily images of hand-made jewelery crafted by students 
+description: A Windows Desktop Calendar that features daily images of student-made jewelry.
 ---
 
-# Desktop Calendar for Windows showing daily images of hand-made jewelery crafted by students 
+# A Windows Desktop Calendar that features daily images of student-made jewelry.
 
 ![](https://nredko.com/assets/img/calendar.png)
 
